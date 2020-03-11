@@ -1,0 +1,155 @@
+Giriş Yap Ekranı
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace CowteC1
+{
+    public partial class frmGirisYap : Form
+    {
+        public frmGirisYap()
+        {
+            InitializeComponent();
+        }
+
+        private void btnHesapOl_Click(object sender, EventArgs e)
+        {
+            HesapOlustur2 frm1 = new HesapOlustur2();
+            frm1.Show();
+            this.Hide();
+        }
+
+        private void btnGiris_Click(object sender, EventArgs e)
+        {
+            CiftlikBilgisi5 frm1 = new CiftlikBilgisi5();
+            frm1.Show();
+            this.Hide();
+        }
+
+        private void linkLabel1_Click(object sender, EventArgs e)
+        {
+            SifremiUnuttum3 frm3 = new SifremiUnuttum3();
+            frm3.Show();
+            this.Hide();
+        }
+
+        private void textBox2_Click(object sender, EventArgs e)
+        {
+            textBox2.Clear();
+            textBox2.ForeColor = Color.Black;
+        }
+
+        private void textBox1_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+            textBox1.ForeColor = Color.Black;
+        }
+
+        private void textBox2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.ActiveControl = textBox1;
+                textBox1.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            textBox1.PasswordChar = '*';
+            
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+    }
+}
+
+
+HESAP OLUŞTUR EKRANI
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace CowteC1
+{
+    public partial class HesapOlustur2 : Form
+    {
+        public HesapOlustur2()
+        {
+            InitializeComponent();
+        }
+
+        private void textBox1_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+            textBox1.ForeColor = Color.Black;
+        }
+
+        private void textBox2_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+            textBox1.ForeColor = Color.Black;
+        }
+
+        private void textBox3_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+            textBox1.ForeColor = Color.Black;
+        }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.ActiveControl = textBox2;
+                textBox2.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBox2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.ActiveControl = textBox3;
+                textBox3.ForeColor = Color.Black;
+            }
+        }
+
+        private void btnGdon1_Click(object sender, EventArgs e)
+        {
+            frmGirisYap frm4 = new frmGirisYap();
+            frm4.Show();
+            this.Hide();
+        }
+
+        private void btnKaydet1_Click(object sender, EventArgs e)
+        {
+            frmGirisYap frm4 = new frmGirisYap();
+            frm4.Show();
+            this.Hide();
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            textBox3.PasswordChar = '*' ;
+        }
+    }
+}
+
